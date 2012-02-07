@@ -51,20 +51,7 @@ src: url('../fonts/dinpro-light-webfont.eot?#iefix') format('embedded-opentype')
 @darkOrange: rgb(184, 89, 59);
 
 html {
-/* 	background: @green; */
-	background-image: -webkit-gradient(
-		radial,
-		50% 35%, 0,
-		50% 35%, 400,
-		from(rgba(101,142,62, 0.1)),
-		to(rgba(14,49,7,1))
-	);
-
-	background-image: -moz-radial-gradient(
-		50% 35% 40deg,
-		rgba(101,142,62, 0.1) 0%,
-		rgba(14,49,7, 1) 100%
-	);
+	background-image: url(../assets/background.png);
 	color: white;
 }
 body {
@@ -72,8 +59,7 @@ body {
 	width: 952px;
 	background: url(../assets/point.png) no-repeat;
 	font-family: "DINCondBlackRegular";
-	
-		
+	padding-top: 10px;
 }
 
 header {
@@ -94,43 +80,49 @@ header {
 		margin-bottom: 0px;
 	}
 	h1{
-		margin: 0;
+		margin: 0 auto;
+		width: 355px;
 		color: @orange;
 		text-align: center;
 		text-transform: uppercase;
-		font-family: 'DINProLight';
+		font-family: 'DINProLight';		
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-color: #F7A535;
+		background-image: -moz-linear-gradient(top, #FDB924, #EF864E);
+		background-image: -ms-linear-gradient(top, #FDB924, #EF864E);
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FDB924), to(#EF864E));
+		background-image: -webkit-linear-gradient(top, #FDB924, #EF864E);
+		background-image: -o-linear-gradient(top, #FDB924, #EF864E);
+		background-image: linear-gradient(top, #FDB924, #EF864E);
+		background-repeat: repeat-x;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FDB924', endColorstr='#EF864E', GradientType=0);
+
 	}
 }
-/* header::before {
-	background: url(../assets/brace_left.png); */
-/* width: 28px; */
-/* height: 128px; */
-/* display: inline-block; */
-/* float: left; */
-/* content: ""; */
-/* header::after {
-	background: url(../assets/brace_right.png); */
-/* width: 28px; */
-/* height: 128px; */
-/* display: inline-block; */
-/* float: left; */
-/* content: ""; */
 
 
 ul.bottom_menu,
 nav ul.top_menu {
-	
-	width: 700px;
-	height: 20px;
+	width: 655px;
+	height: 30px;
 	margin: 20px auto;
+	padding: 0;
+	border-bottom: 2px solid rgb(247,173,42);
 	li{
 		float: left;
-		padding: 0 20px;
+		padding: 0 24px;
 		width: auto;
 		list-style: none;
 		text-transform: uppercase;
 		font-family: "DINProMedium";
 
+	}
+	li:first-child{
+		padding-left: 0;
+	}
+	li:last-child{
+		padding-right: 0;
 	}
 }
 
@@ -252,7 +244,6 @@ footer {
 
 
 .btn {
-	
   display: inline-block;
   padding: 5px 30px;
   border: 1px solid @darkOrange;
