@@ -1,1 +1,8 @@
 Collecting of files for Orange development
+Folder structure:
+- js 
+- styles
+- fonts
+- assets
+
+Porject use Twitter Bootstrap framework and less
