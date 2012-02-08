@@ -1,49 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster);
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'DINCondBlackRegular';
-    src: url('../fonts/ff_din_condensed_black-webfont-webfont.eot');
-/* src: url('../fonts/ff_din_condensed_black-webfont-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ff_din_condensed_black-webfont-webfont.woff') format('woff'),
-         url('../fonts/ff_din_condensed_black-webfont-webfont.ttf') format('truetype'),
-         url('../fonts/ff_din_condensed_black-webfont-webfont.svg#DINCondBlackRegular') format('svg'); */
-
-}
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'DINProLight';
-    src: url('../fonts/dinpro-light-webfont.eot');
-src: url('../fonts/dinpro-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/dinpro-light-webfont.woff') format('woff'),
-         url('../fonts/dinpro-light-webfont.ttf') format('truetype'),
-         url('../fonts/dinpro-light-webfont.svg#DINCondBlackRegular') format('svg');
-
-}
-
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'DINProBold';
-    src: url('../fonts/dinpro-bold-webfont.eot');
-	src: url('../fonts/dinpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/dinpro-bold-webfont.woff') format('woff'),
-         url('../fonts/dinpro-bold-webfont.ttf') format('truetype'),
-         url('../fonts/dinpro-bold-webfont.svg#DINCondBlackRegular') format('svg');
-}
-
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'DINProMedium';
-    src: url('../fonts/dinpro-medium-webfont.eot');
-	src: url('../fonts/dinpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/dinpro-medium-webfont.woff') format('woff'),
-         url('../fonts/dinpro-medium-webfont.ttf') format('truetype'),
-         url('../fonts/dinpro-medium-webfont.svg#DINCondBlackRegular') format('svg');
-}
-
+// Fonts
+@import "fonts.less";
 
 
 @orange: rgb(245, 136, 72);
@@ -108,7 +64,6 @@ nav ul.top_menu {
 	height: 30px;
 	margin: 20px auto;
 	padding: 0;
-	border-bottom: 2px solid rgb(247,173,42);
 	li{
 		float: left;
 		padding: 0 24px;
@@ -116,14 +71,17 @@ nav ul.top_menu {
 		list-style: none;
 		text-transform: uppercase;
 		font-family: "DINProMedium";
+		&:first-child{
+			padding-left: 0;		
+		}
+		&:last-child{
+			padding-right: 0;
+		}
+	}
+}
+nav ul.top_menu{
+	border-bottom: 2px solid rgb(247,173,42);
 
-	}
-	li:first-child{
-		padding-left: 0;
-	}
-	li:last-child{
-		padding-right: 0;
-	}
 }
 
 .slider{
@@ -205,13 +163,76 @@ article {
 }
 
 footer {
-	.socilas {
-	margin: 30px auto;
-	width: 323px;
-	height: 27px;
-	background: url(../assets/socials.png);
+	ul.socials {
+		margin: 80px auto 0 auto;
+		padding: 0px;
+		list-style: none;
+		width: 400px;
+		height: 50px;
+		font-family: 'SocialicoRegular';
+
+		li {
+			list-style: none;
+			float: left;
+			margin-left: 15px;
+			&:last-child {
+				margin-left: none;
+			}
+			a {
+				color: #0e3107;
+				text-decoration: none;
+				text-align: center;
+				text-transform: uppercase;
+				display: block;
+				width: 30px;
+				height: 30px;
+				background: white;
+				.border-radius(4px);
+				font-size: 30px;
+				line-height: 30px;
+				overflow: hidden;
+				&:hover{					
+				}
+			}
+			&:nth-child(1) {
+				a:hover {
+					color: rgb(59,89,152);
+				}
+			}
+			&:nth-child(2) {
+				a:hover {
+					color: rgb(123,0,153);
+				}
+			}
+			&:nth-child(3) {
+				a:hover {
+					color: rgb(203,50,44);
+				}
+			}
+			&:nth-child(4) {
+				a:hover {
+					color: rgb(74,210,255);
+				}
+			}
+			&:nth-child(5) {
+				a:hover {
+					color: rgb(88,88,88);
+				}
+			}
+			&:nth-child(6) {
+				a:hover {
+					color: rgb(88,88,88);
+				}
+			}
+			&:nth-child(7) {
+				a:hover {
+					color: rgb(250,157,57);
+				}
+			}
 	
+		}
 	}
+	
 	hr {
 		margin: 10px auto;
 		width: 608px;
@@ -242,17 +263,16 @@ footer {
 
 
 
-
 .btn {
-  display: inline-block;
-  padding: 5px 30px;
-  border: 1px solid @darkOrange;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(255,255,255,.75);
-  font-size: 20px;
-  font-family: Lobster;
-  cursor: pointer;
-  .border-radius(5px);
+  	display: inline-block;
+  	padding: 5px 30px;
+  	border: 1px solid @darkOrange;
+  	text-align: center;
+  	text-shadow: 0 1px 1px rgba(255,255,255,.75);
+  	font-size: 20px;
+  	font-family: Lobster;
+  	cursor: pointer;
+  	.border-radius(5px);
 	background-color: @darkOrange;
   
 }
